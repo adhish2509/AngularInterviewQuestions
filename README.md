@@ -165,6 +165,46 @@ err => console.error('Error has occurred: ' + err),
 );
 
 
+
+After configuring the routes, the next step is to decide how to navigate. Navigation will happen based on user actions like clicking a hyperlink, clicking on a button, etc. Hence, there is hyperlink based navigation and programmatical navigation.
+
+Hyperlink based navigation
+RouterLink directive can be used with the anchor tag for using hyperlink based navigation in Angular. Have a look at code shown below:
+
+app.component.ts
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-root',
+  styleUrls: ['./app.component.css'],
+  templateUrl: './app.component.html'
+})
+export class AppComponent {
+  title = 'Tour of Books';
+}
+ 
+
+app.component.html
+<h1>{{title}}</h1>
+<nav>
+    <a [routerLink]='["/dashboard"]' routerLinkActive="active">Dashboard</a>
+    <a [routerLink]='["/books"]' routerLinkActive="active">Books</a>
+</nav>
+<router-outlet></router-outlet>
+Line 3-4: Create hyperlinks and a routerLink directive and specify the paths to navigate. Here, if a user clicks on the Dashboard, it will navigate to /dashboard. routerLinkActive applies the given CSS class to the link when it is clicked to make it look like an active link(active is a CSS class defined in app.component.css which changes the link color to blue in this case)
+
+Line 6: <router-outlet> is the place where the output of the component associated with the given path will be displayed. For example, if the user click on Books, it will navigate to /books which will execute BooksComponent class as mentioned in the configuration details and the output will be displayed in the router-outlet class.
+
+ 
+
+Programmatical navigation
+To navigate programmatically, use the navigate() method of the Router class. Inject the router class into the component and invoke the navigate method as shown below.
+
+this.router.navigate([url, parameters]) 
+URL is the route path to which we want to navigate.
+
+Parameters are the route values passed along with the URL.
+
+
 How do Observable handle errors?
 Observables handle errors by setting an error callback on the observer rather than depending on try/catch, which is worthless in an asynchronous environment.
 
