@@ -1,6 +1,170 @@
 # AngularInterviewQuestions
 angular interview questions
 
+How do you define Angular Framework?
+Angular is an open-source front-end framework built on TypeScript. Angular makes it simple to create desktop, mobile, and web applications. Dependency injection, declarative templates, and e2e tooling are some of the key characteristics Angular framework's key characteristics which facilitate application development.
+
+What is the primary purpose of Angular?
+The primary purpose of Angular is to help in creating Single Page Applications (SPAs). A collection of built-in modules from Angular make the creation of single page applications much easier. Additionally, Angular is also recognized as a complete web framework because of the features like modular CLI, type safety and built-in data streaming.
+
+What exactly do Single Page Applications (SPA) do?
+Single Page Applications are web-based programs that just require a single page load when minor adjustments to the UI are provided to add the new functionalities. The new page content is generated dynamically instead of loading/reloading the HTML pages. It is possible because of the ability of JavaScript to modify the DOM elements on the active page. The user experience is more consistent while using a single page application because it is faster.
+
+What advantages does Angular give in comparison to other legacy technologies?
+The following is a list of some of the main benefits of using the Angular framework:
+
+It features two-way data binding, MVC pattern architecture, support for static and Angular templates, the ability to create custom directives, and RESTful services.
+Incorporates important features including event handlers and animation, supports validations, supports dependency injection, communication between server and client and many more.
+
+What is the default module that is used to bootstrap an Angular application?
+Every application developed using Angular will have atleast one module called as bootstrapping module. The most frequently used module is the root module - AppModule
+
+What does an Angular provider do?
+In Angular, a provider is a service that may be customized. To facilitate loose coupling, maintainability, and reusability in Angular applications, the Angular provider is responsible for controlling the instantiation and configuration of objects that can be injected into components.
+
+What distinguishes AngularJS from the Angular framework?
+
+| AngularJS | Angular |
+|-----------|---------|
+| Programming language used is JavaScript | Programming language used is TypeScript |
+| It uses MVC architecture | It uses a component-based approach |
+| Uses bi-directional data flow | Uses uni-directional data flow |
+| Mobile platforms are not supported | Mobile platforms are supported |
+
+What are the core elements of Angular?
+The core elements of Angular are as follows:
+
+Components
+Modules
+Templates
+Services
+Metadata and Decorators
+
+
+What motivated the development of client-side frameworks like Angular?
+The need for client-side frameworks like Angular was driven by a variety of issues that programmers encountered when creating complex web apps. The following are some major issues behind the creation of such frameworks:
+
+Richer User Interfaces:Since the traditional web applications were mainly server-rendered, the user interfaces were static and less interactive. There was a demand for frameworks that could manage these needs on the client-side with interactive and complicated user interfaces, similar to desktop apps.
+
+Separation of Concerns: As web applications became complex, developers faced difficulties in maintaining a distinct separation of concerns and managing the codebase. For a clear separation of data, display, and application logic, client-side frameworks established architectural patterns as MVC (Model-View-Controller) and later MVVM (Model-View-ViewModel).
+
+Single-Page Applications (SPAs): As SPAs became more popular, where the entire application is loaded only once and subsequent interactions are handled dynamically on the client-side without page reloads, frameworks were needed that could manage the application state and efficiently handle routing, data fetching, and UI updates.
+
+Ecosystem and Tooling: Frameworks like Angular included a large ecosystem of tools, packages, and libraries that made the development, testing, debugging, and deployment processes easier. They supplied integrated development environments (IDEs) designed for effective web application development, build systems, automated testing, and tools for dependency management.
+
+Collaboration and Code Reusability: Client-side frameworks promoted developer collaboration by defining standards and best practices. They encouraged code reuse through the use of components and modules, enabling developers to create applications more quickly and keep the codebase consistent.
+
+
+For its apps, Angular uses client-side rendering by default. Can one create an application on Angular which also renders on the server side?
+Yes, Angular uses Angular Universal module which is used for server-side rendering of Angular applications.
+Using Angular Universal has the following benefits:
+
+Users will instantaneously be able to see the application view which provides better experience for the new users
+Since most of the search engines accept pages that are using HTML, Universal can guarantee that the content will be accessible to all search engines, improving SEO.
+
+There are three components to the MVVM architecture:
+
+Model
+View
+ViewModel
+Model : Model contains an entity's structure. It essentially includes information about an object.
+View : The application's visual layer is called the view. It presents the information that is included in the Model. This will be a component's HTML template, to use angular terminology.
+ViewModel : The abstract layer of the application is called as ViewModel. A viewmodel manages the application's logic. It controls a model's data and presents it in the view.
+Data-binding links the view and viewmodel together. All the changes which are updated in the view are recorded by the viewmodel and updates the relevant data accordingly inside the model
+
+What is Just-in-Time (JIT) Compilation?
+JIT compilation in Angular describes the dynamic conversion of Typescript and Angular Templates into JavaScript at runtime during the development phase. As you make changes to the code, the application can be updated right away. This enables quick development iterations.
+
+How does Angular gets started when you serve the application? Mention the steps.
+Each and every Angular application consists of a file called “angular.json”. The entire configurations related to the application will be contained in this file. The app developer checks this file to know the entry point of the application while creating the app.
+The property “main” inside the options object within the build section mention’s the entry point of the Angular application, in most of the case it is “main.ts” file.
+Next, in-order to bootstrap the Angular application the “main.ts” calls the function called as bootstrapModule. Furthermore, building a browser environment for the Angular application to run in.
+The app.module.ts file contains a declaration for the AppModule. All of the component declarations are included in this module.
+In the file app.component.ts, the component is specified. The webpage and this file communicate with one other and exchange data.
+There are three properties declared for each component:
+
+template/templateURL includes the component's HTML.
+Accessing the component is done via a selector.
+Component-specific stylesheets can be found at stylesURL.
+Angular then calls the file index.html. As a result, this file invokes the app-root which is the root component.
+app.component.ts contains a definition of the root component.
+The <app-root> tag is used to display the HTML template for the root component.
+This is how an Angular application works.
+
+What does Angular declarable mean?
+In Angular, declarable refers to a class, component, directive or pipe that can be declared and used within an Angular module. Declarables are a part of the declarations array in an Angular module's metadata.
+Declarations would use the following format:
+declarations: [
+Component,
+Pipe,
+Directive
+],
+
+What limitations apply to declarable classes in Angular?
+Below are few limitations that apply to declarable classes in Angular such as:
+
+Module scope
+Unique naming
+Unique selector names
+Directive selector restrictions
+Template encapsulation
+
+
+What is to be used to transform the data inside the template?
+Pipes are used for transforming data inside templates. The primary function of the pipe is to display transformed data. The original data, however, will not be modified. Only the display will be impacted with the use of Angular pipes.
+
+What types of pipes are available broadly in Angular?
+Two types of pipes are broadly available in Angular:
+
+Built-in pipes – provided by the Angular
+Custom pipes – user can design their pipe as per requirement
+
+List out some built-in pipes in Angular and their usage.
+
+Uppercase:Uppercase pipe is used to convert the expression into uppercase.
+Lowercase:Lowercase pipe is used to convert the expression into lowercase.
+Titlecase:Titlecase pipe is used to convert the first character in each word of the given expression into a capital letter.
+Currency:A currency pipe is used to display a currency symbol.
+Date:Date pipe is used to display the date in the expected format
+Percent:Percent pipe is used to display the number in a percentage
+Slice:A slice pipe is used to extract a subset of elements or characters from an array or string, respectively.
+
+
+How can pipes be chained?
+Pipes can be accessed with the pipe symbol "|" and can be chained together using multiple | symbols, which come one after another pipe. The syntax for chaining pipes in Angular is shown below:
+Today is {{ currentDate | date:’fullDate’ | uppercase}}
+
+How to add multiple parameters in the pipes?
+Parameterized Pipes are pipes that contain one or more parameters.
+It uses a colon (:) in the command to pass multiple parameters.
+
+What is the default value for minIntegerDigits, minFractionDigits, and maxFractionDigits?
+minIntegerDigits: The default value is 1
+minFractionDigits: The default value is 0
+maxFractionDigits: The default value is 3
+
+In which format will the date display if ‘fullDate’ parameter is used in the date pipe?
+'fullDate' will display the date equivalent to 'EEEE, MMMM d, y'
+(e.g., Monday, April 17, 2023)
+
+If you have created a custom pipe called 'MyPipe' and you want to use it within a module. In which property of module metadata should you declare 'MyPipe'?
+'MyPipe' should be declared in the declarations metadata of the module.
+
+What is the use of the PipeTransform interface in custom pipes?
+The PipeTransform interface needs to be inherited to create the custom pipe.
+The PipeTransform interface includes a transform method for writing custom pipe functionality.
+
+@Pipe({
+name: 'pipename'
+})
+export class classname implements PipeTransform {
+transform(value: any, ...args:any[]): any {
+}}
+**
+How many arguments does the transform method include?
+The transform method takes two arguments:
+The value of the expression passed to the pipe that needs to be transformed and the parameter to pipe. Depending on the number of parameters passed to the pipe, the pipe can have multiple arguments. The final value should be returned by the transform method.
+
 Q) Explain Angular Service
 A) In Angular, a service is a class that includes functionality that may be reused throughout the application.
 Angular services are a technique for abstracting common code and functionality across an application.
