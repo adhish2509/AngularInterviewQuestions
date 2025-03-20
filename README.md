@@ -3,6 +3,7 @@ angular interview questions
 
 How do you define Angular Framework?
 Angular is an open-source front-end framework built on TypeScript. Angular makes it simple to create desktop, mobile, and web applications. Dependency injection, declarative templates, and e2e tooling are some of the key characteristics Angular framework's key characteristics which facilitate application development.
+->bind model to the ui, implements M V Vm inside browser
 
 What is the primary purpose of Angular?
 The primary purpose of Angular is to help in creating Single Page Applications (SPAs). A collection of built-in modules from Angular make the creation of single page applications much easier. Additionally, Angular is also recognized as a complete web framework because of the features like modular CLI, type safety and built-in data streaming.
