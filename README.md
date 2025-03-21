@@ -31,6 +31,7 @@ What distinguishes AngularJS from the Angular framework?
 | It uses MVC architecture | It uses a component-based approach |
 | Uses bi-directional data flow | Uses uni-directional data flow |
 | Mobile platforms are not supported | Mobile platforms are supported |
+| Lazy Loading not supported | Lazy Loading is supported |
 
 What are the core elements of Angular?
 The core elements of Angular are as follows:
