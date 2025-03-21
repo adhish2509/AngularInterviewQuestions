@@ -497,3 +497,17 @@ console.log(params.get('params'));
 this.params = params.get('params');
 });
 }
+
+
+-----------------------------------------------------------------------------------------------------------------
+synechron Angular Interview Questions
+
+semantics in html5
+responsive ui
+position
+media query
+iife
+higher order function
+hoisting
+narrowing
+
